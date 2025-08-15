@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './Navbar'
 import Fruitcard from './Fruitcard'
@@ -17,6 +17,20 @@ import Juicecard from './Juicecard'
 function App() {
   let [counter, setCounter] = useState(0)
   let [showCounter, setShowCounter] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('menu-open')
+    } else {
+      document.body.classList.remove('menu-open')
+    }
+    
+    // Cleanup function
+    return () => {
+      document.body.classList.remove('menu-open')
+    }
+  }, [isMenuOpen])
 
   function incrementCounter() {
         setCounter(prev => prev + 1)

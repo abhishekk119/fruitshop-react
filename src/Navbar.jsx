@@ -1,30 +1,54 @@
-import shoppingcartimage from './assets/icons8-shopping-cart-80.png'
-import { useState } from 'react'
+import { useState } from 'react';
+import shoppingcartimage from './assets/icons8-shopping-cart-80.png';
 
-function Navbar({counter , showCounter}) {
-    
-    
-    return(
-        <nav className="navbar">
-            <h2 className="logo"><strong>FruitShop</strong></h2>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Store Locator</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div className="kart">
-                {showCounter && (
-                    <div className="itemcounter">
-                    <p>{counter}</p>
-                    </div>
-                )}
-                
-                <div className="kartimage"><img src={shoppingcartimage} style={{height: "45px", width: "45px"}}/></div>
-            </div>
-            <button className="login-button">Login</button>
-        </nav>
-    )
+function Navbar({ counter, showCounter }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <nav className="navbar">
+      <h2 className="logo"><strong>FruitShop</strong></h2>
+      
+      {/* Hamburger Icon (Mobile Only) */}
+      <div 
+        className={`hamburger ${isMenuOpen ? 'open' : ''}`} 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+        <ul>
+          <li><a href="#" onClick={() => setIsMenuOpen(false)}>Home</a></li>
+          <li><a href="#" onClick={() => setIsMenuOpen(false)}>Services</a></li>
+          <li><a href="#" onClick={() => setIsMenuOpen(false)}>Store Locator</a></li>
+          <li><a href="#" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+        </ul>
+      </div>
+
+      {/* Desktop Menu (Hidden on Mobile) */}
+      <ul className="desktop-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Store Locator</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div className="kart">
+        {showCounter && (
+          <div className="itemcounter">
+            <p>{counter}</p>
+          </div>
+        )}
+        <div className="kartimage">
+          <img src={shoppingcartimage} style={{ height: "45px", width: "45px" }} alt="Cart" />
+        </div>
+      </div>
+      <button className="login-button">Login</button>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
