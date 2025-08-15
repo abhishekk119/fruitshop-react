@@ -8,7 +8,11 @@ import Orange from './assets/Oranges.webp'
 import Watermelon from './assets/watermelon.jpg'
 import Pineapple from './assets/pineapple.webp'
 import Mango from './assets/mango.webp'
+import Mangomilkshake from './assets/mangomilkshake.jpg'
+import Applemilkshake from './assets/Apple-Milkshake.webp'
+import Strawberrymilkshake from './assets/strawberry-milkshake.jpg'
 import Sectionlabel from './Sectionlabel'
+import Juicecard from './Juicecard'
 
 function App() {
   let [counter, setCounter] = useState(0)
@@ -31,6 +35,11 @@ function App() {
     <Fruitcard imageSource = {Mango} name = "Fruit King Mango" price= "$2.5" description= "Fresh Mango from our farm." functionname={incrementCounter}/>
     </div>
     <Sectionlabel sectionname = "Juices"/>
+    <div className='juicecardcontainer'>
+    <Juicecard imageSource={Mangomilkshake} name = "Pure Mango Milkshake" price= "$4.3" description= "Fresh mango milkshake refresher." functionname={incrementCounter}/>
+    <Juicecard imageSource={Applemilkshake} name = "Rich Apple Milkshake" price= "$5.3" description= "Fresh apple milkshake refresher." functionname={incrementCounter}/>
+    <Juicecard imageSource={Strawberrymilkshake} name = "Strawberry Milkshake" price= "$4.4" description= "Fresh strawberry milkshake refresher." functionname={incrementCounter}/>
+    </div>
     </>
     )
 }

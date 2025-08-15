@@ -65,6 +65,18 @@ ul li a {
   padding: 0;
 }
 
+.juicecardcontainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
 .fruitcardwrapper {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -79,6 +91,28 @@ ul li a {
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+
+.juicecardwrapper {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 280px;
+  border: 1px solid rgb(211, 211, 211);
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.juicecard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .fruitcardwrapper {
@@ -104,17 +138,41 @@ ul li a {
   margin: 0;
 }
 
+.juicecard img,
+.juicecard h2,
+.juicecard h3,
+.juicecard p {
+  margin: 0;
+}
+
 .fruitcard h3 {
+  color: rgb(90, 90, 90);
+}
+
+.juicecard h3 {
   color: rgb(90, 90, 90);
 }
 
 .fruitcard h2 {
   font-family: "Inter", sans-serif;
   font-size: 20px;
+  color: rgb(23, 132, 96);
+}
+
+.juicecard h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: rgb(23, 132, 96);
 }
 
 .fruitcard p {
   font-family: "Inter", sans-serif;
+  color: grey;
+}
+
+.juicecard p {
+  font-family: "Inter", sans-serif;
+  color: grey;
 }
 
 .buttons {
