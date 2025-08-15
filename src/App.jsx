@@ -24,6 +24,7 @@ function App() {
     }
   return(
     <>
+    <div className='maincontainer'>
     <Navbar counter={counter} showCounter={showCounter}/>
     <Sectionlabel sectionname = "Fruits"/>
     <div className='fruitcardcontainer'>
@@ -39,6 +40,7 @@ function App() {
     <Juicecard imageSource={Mangomilkshake} name = "Pure Mango Milkshake" price= "$4.3" description= "Fresh mango milkshake refresher." functionname={incrementCounter}/>
     <Juicecard imageSource={Applemilkshake} name = "Rich Apple Milkshake" price= "$5.3" description= "Fresh apple milkshake refresher." functionname={incrementCounter}/>
     <Juicecard imageSource={Strawberrymilkshake} name = "Strawberry Milkshake" price= "$4.4" description= "Fresh strawberry milkshake refresher." functionname={incrementCounter}/>
+    </div>
     </div>
     </>
     )
