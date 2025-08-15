@@ -1,0 +1,38 @@
+import { useState } from 'react'
+import './App.css'
+import Navbar from './Navbar'
+import Fruitcard from './Fruitcard'
+import Apples from './assets/apple.avif'
+import Banana from './assets/banana2.webp'
+import Orange from './assets/Oranges.webp'
+import Watermelon from './assets/watermelon.jpg'
+import Pineapple from './assets/pineapple.webp'
+import Mango from './assets/mango.webp'
+import Sectionlabel from './Sectionlabel'
+
+function App() {
+  let [counter, setCounter] = useState(0)
+  let [showCounter, setShowCounter] = useState(false);
+
+  function incrementCounter() {
+        setCounter(prev => prev + 1)
+        setShowCounter(true);
+    }
+  return(
+    <>
+    <Navbar counter={counter} showCounter={showCounter}/>
+    <Sectionlabel sectionname = "Fruits"/>
+    <div className='fruitcardcontainer'>
+    <Fruitcard imageSource = {Apples} name = "Kashmiri Apple" price= "$2.0" description= "Fresh Apples from our farm." functionname={incrementCounter}/>
+    <Fruitcard imageSource = {Banana} name = "Robusta Banana" price= "$1.2" description= "Fresh Bananas from our farm." functionname={incrementCounter}/>
+    <Fruitcard imageSource = {Orange} name = "American Oranges" price= "$1.3" description= "Fresh Oranges from our farm." functionname={incrementCounter}/>
+    <Fruitcard imageSource = {Watermelon} name = "Belmont Watermelon" price= "$2.0" description= "Fresh Watermelons from our farm." functionname={incrementCounter}/>
+    <Fruitcard imageSource = {Pineapple} name = "Spanish Pineapple" price= "$1.8" description= "Fresh Pineapples from our farm." functionname={incrementCounter}/>
+    <Fruitcard imageSource = {Mango} name = "Fruit King Mango" price= "$2.5" description= "Fresh Mango from our farm." functionname={incrementCounter}/>
+    </div>
+    <Sectionlabel sectionname = "Juices"/>
+    </>
+    )
+}
+
+export default App
