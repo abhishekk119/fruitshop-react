@@ -40,8 +40,8 @@ function App() {
     <>
     <div className='maincontainer'>
     <Navbar counter={counter} showCounter={showCounter}/>
-    <Sectionlabel sectionname = "Fruits"/>
-    <div className='fruitcardcontainer'>
+    <Sectionlabel sectionname = "Fruits" id="fruits-section"/>
+    <div className='fruitcardcontainer' id="fruits">
     <Fruitcard imageSource = {Apples} name = "Kashmiri Apple" price= "$2.0" description= "Fresh Apples from our farm." functionname={incrementCounter}/>
     <Fruitcard imageSource = {Banana} name = "Robusta Banana" price= "$1.2" description= "Fresh Bananas from our farm." functionname={incrementCounter}/>
     <Fruitcard imageSource = {Orange} name = "American Oranges" price= "$1.3" description= "Fresh Oranges from our farm." functionname={incrementCounter}/>
@@ -49,8 +49,8 @@ function App() {
     <Fruitcard imageSource = {Pineapple} name = "Spanish Pineapple" price= "$1.8" description= "Fresh Pineapples from our farm." functionname={incrementCounter}/>
     <Fruitcard imageSource = {Mango} name = "Fruit King Mango" price= "$2.5" description= "Fresh Mango from our farm." functionname={incrementCounter}/>
     </div>
-    <Sectionlabel sectionname = "Juices"/>
-    <div className='juicecardcontainer'>
+    <Sectionlabel sectionname = "Juices" id="juices-section"/>
+    <div className='juicecardcontainer'  id="juices">
     <Juicecard imageSource={Mangomilkshake} name = "Pure Mango Milkshake" price= "$4.3" description= "Fresh mango milkshake refresher." functionname={incrementCounter}/>
     <Juicecard imageSource={Applemilkshake} name = "Rich Apple Milkshake" price= "$5.3" description= "Fresh apple milkshake refresher." functionname={incrementCounter}/>
     <Juicecard imageSource={Strawberrymilkshake} name = "Strawberry Milkshake" price= "$4.4" description= "Fresh strawberry milkshake refresher." functionname={incrementCounter}/>

@@ -5,6 +5,11 @@ body {
 }
 
 .navbar {
+  position: fixed; /* Makes navbar stick */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensures navbar stays above other content */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -15,6 +20,10 @@ body {
   background: linear-gradient(to right, #3a7bd5, #d53a9d);
   /*background: linear-gradient(to right, green, rgb(3, 88, 3));*/
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.maincontainer {
+  margin-top: 70px; /* Should match your navbar height */
 }
 
 ul {
@@ -323,6 +332,10 @@ hr {
 
 .desktop-menu {
   display: flex;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 767px) {

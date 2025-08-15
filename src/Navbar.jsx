@@ -21,8 +21,8 @@ function Navbar({ counter, showCounter }) {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
         <ul>
-          <li><a href="#" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-          <li><a href="#" onClick={() => setIsMenuOpen(false)}>Services</a></li>
+          <li><a href="#fruits" onClick={() => setIsMenuOpen(false)}>Fruits</a></li>
+          <li><a href="#juices" onClick={() => setIsMenuOpen(false)}>Juices</a></li>
           <li><a href="#" onClick={() => setIsMenuOpen(false)}>Store Locator</a></li>
           <li><a href="#" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
         </ul>
@@ -30,8 +30,8 @@ function Navbar({ counter, showCounter }) {
 
       {/* Desktop Menu (Hidden on Mobile) */}
       <ul className="desktop-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="#fruits">Fruits</a></li>
+        <li><a href="#juices">Juices</a></li>
         <li><a href="#">Store Locator</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
