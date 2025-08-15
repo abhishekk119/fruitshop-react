@@ -1,7 +1,10 @@
 
 function Sectionlabel({sectionname}) {
     return(
-        <div className="section"><p>{sectionname}</p></div>
+        <>
+        <div className="section gradient-text"><p>{sectionname}</p></div>
+        <hr />
+        </>
     )
 }
 

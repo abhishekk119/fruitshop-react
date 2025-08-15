@@ -221,7 +221,15 @@ ul li a {
   justify-content: center;
   font-size: 30px;
   font-weight: bold;
-  color: rgb(99, 99, 99);
+  color: rgb(67, 67, 67);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #bfbebe; /* or any color you prefer */
+  width: 100%;
+  margin: 10px 0; /* adjust as needed */
 }
 
 .kart {
@@ -290,5 +298,15 @@ ul li a {
 
   .fruitcardcontainer {
     width: 100%;
+  }
+
+  .maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
   }
 }
