@@ -49,6 +49,7 @@ function App() {
     <Fruitcard imageSource = {Pineapple} name = "Spanish Pineapple" price= "$1.8" description= "Fresh Pineapples from our farm." functionname={incrementCounter}/>
     <Fruitcard imageSource = {Mango} name = "Fruit King Mango" price= "$2.5" description= "Fresh Mango from our farm." functionname={incrementCounter}/>
     </div>
+    <hr />
     <Sectionlabel sectionname = "Juices" id="juices-section"/>
     <div className='juicecardcontainer'  id="juices">
     <Juicecard imageSource={Mangomilkshake} name = "Pure Mango Milkshake" price= "$4.3" description= "Fresh mango milkshake refresher." functionname={incrementCounter}/>
