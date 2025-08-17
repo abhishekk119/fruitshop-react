@@ -36,15 +36,15 @@ function Kart({ cart }) {
         <div className="placeorderbuttondiv">
           <button className="placeorderbutton">Place order</button>
         </div>
-      </div>
 
-      <div className="continueshoppingbutton">
-        <button
-          className="continueshopping-button"
-          onClick={() => navigate(-1)}
-        >
-          Continue Shopping
-        </button>
+        <div className="continueshoppingbutton">
+          <button
+            className="continueshopping-button"
+            onClick={() => navigate(-1)}
+          >
+            Continue Shopping
+          </button>
+        </div>
       </div>
     </>
   );
