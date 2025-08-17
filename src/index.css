@@ -440,7 +440,7 @@ html {
   width: 150px;
   background-color: white;
   color: black;
-  border: 1px solid grey;
+  border: 1px solid rgb(196, 196, 196);
   display: flex;
   align-items: center;
   justify-content: center;
