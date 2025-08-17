@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Kart({ cart }) {
   const navigate = useNavigate();
@@ -39,7 +37,7 @@ function Kart({ cart }) {
               </h3>
               <p
                 style={{
-                  fontSize: "15px",
+                  fontSize: "8px",
                   fontFamily: "Inter, sans-serif",
                   color: "gray",
                 }}
