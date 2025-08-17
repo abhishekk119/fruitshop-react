@@ -19,9 +19,11 @@ function Juicecard({
         <h3>Price: ₹{price}</h3>
         <p>{description}</p>
         {showitemaddedmsg && (
-          <p style={{ color: "#4caf50" }}>
-            ✅ Item added to cart. Quantity: {itemQuantity}
-          </p>
+          <div className="itemaddedmsgdiv">
+            <p style={{ color: "#3a7bd5" }}>
+              ☑️ Item added to cart. Quantity: {itemQuantity}
+            </p>
+          </div>
         )}
         <div className="buttons">
           <button className="buynowbtn">Buy Now</button>
