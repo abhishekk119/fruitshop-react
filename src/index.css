@@ -465,7 +465,7 @@ html {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 8px solid white; /* White fill */
-  filter: drop-shadow(0 -1px 0 grey); /* Grey border effect */
+  filter: drop-shadow(0 -1px 0 rgb(196, 196, 196)); /* Grey border effect */
   z-index: 1; /* Ensure it appears above other elements */
 }
 
