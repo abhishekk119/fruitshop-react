@@ -12,8 +12,69 @@ import Applemilkshake from "./assets/Apple-Milkshake.webp";
 import Strawberrymilkshake from "./assets/strawberry-milkshake.jpg";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import App from "./App";
 
-function Home() {
+function Home({ addToCart }) {
+  const fruits = [
+    {
+      imageSource: Apples,
+      name: "Kashmiri Apple",
+      price: 220,
+      description: "1kg Kashmiri apples fresh from the farm.",
+    },
+    {
+      imageSource: Banana,
+      name: "Robusta Banana",
+      price: 80,
+      description: "1kg banana fresh from the farm.",
+    },
+    {
+      imageSource: Orange,
+      name: "American Oranges",
+      price: 90,
+      description: "1kg orange fresh from the farm.",
+    },
+    {
+      imageSource: Watermelon,
+      name: "Belmont Watermelon",
+      price: 140,
+      description: "1kg watermelon fresh from the farm.",
+    },
+    {
+      imageSource: Pineapple,
+      name: "Spanish Pineapple",
+      price: 85,
+      description: "1kg pineapple fresh from the farm.",
+    },
+    {
+      imageSource: Mango,
+      name: "Fruit King Mango",
+      price: 210,
+      description: "1kg mango fresh from the farm.",
+    },
+  ];
+
+  const juices = [
+    {
+      imageSource: Mangomilkshake,
+      name: "Pure Mango Milkshake",
+      price: 200,
+      description: "Fresh mango milkshake refresher.",
+    },
+    {
+      imageSource: Applemilkshake,
+      name: "Rich Apple Milkshake",
+      price: 80,
+      description: "Fresh apple milkshake refresher.",
+    },
+    {
+      imageSource: Strawberrymilkshake,
+      name: "Strawberry Milkshake",
+      price: 90,
+      description: "Fresh strawberry milkshake refresher.",
+    },
+  ];
+
   let [counter, setCounter] = useState(0);
   let [showCounter, setShowCounter] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,73 +107,30 @@ function Home() {
         />
         <Sectionlabel sectionname="Fruits" id="fruits-section" />
         <div className="fruitcardcontainer" id="fruits">
-          <Fruitcard
-            imageSource={Apples}
-            name="Kashmiri Apple"
-            price="$2.0"
-            description="Fresh Apples from our farm."
-            functionname={incrementCounter}
-          />
-          <Fruitcard
-            imageSource={Banana}
-            name="Robusta Banana"
-            price="$1.2"
-            description="Fresh Bananas from our farm."
-            functionname={incrementCounter}
-          />
-          <Fruitcard
-            imageSource={Orange}
-            name="American Oranges"
-            price="$1.3"
-            description="Fresh Oranges from our farm."
-            functionname={incrementCounter}
-          />
-          <Fruitcard
-            imageSource={Watermelon}
-            name="Belmont Watermelon"
-            price="$2.0"
-            description="Fresh Watermelons from our farm."
-            functionname={incrementCounter}
-          />
-          <Fruitcard
-            imageSource={Pineapple}
-            name="Spanish Pineapple"
-            price="$1.8"
-            description="Fresh Pineapples from our farm."
-            functionname={incrementCounter}
-          />
-          <Fruitcard
-            imageSource={Mango}
-            name="Fruit King Mango"
-            price="$2.5"
-            description="Fresh Mango from our farm."
-            functionname={incrementCounter}
-          />
+          {fruits.map((fruit, i) => (
+            <Fruitcard
+              key={i}
+              imageSource={fruit.imageSource}
+              name={fruit.name}
+              price={fruit.price}
+              description={fruit.description}
+              onAdd={() => addToCart(fruit)}
+            />
+          ))}
         </div>
         <hr />
         <Sectionlabel sectionname="Juices" id="juices-section" />
         <div className="juicecardcontainer" id="juices">
-          <Juicecard
-            imageSource={Mangomilkshake}
-            name="Pure Mango Milkshake"
-            price="$4.3"
-            description="Fresh mango milkshake refresher."
-            functionname={incrementCounter}
-          />
-          <Juicecard
-            imageSource={Applemilkshake}
-            name="Rich Apple Milkshake"
-            price="$5.3"
-            description="Fresh apple milkshake refresher."
-            functionname={incrementCounter}
-          />
-          <Juicecard
-            imageSource={Strawberrymilkshake}
-            name="Strawberry Milkshake"
-            price="$4.4"
-            description="Fresh strawberry milkshake refresher."
-            functionname={incrementCounter}
-          />
+          {juices.map((juice, i) => (
+            <Juicecard
+              key={i}
+              imageSource={juice.imageSource}
+              name={juice.name}
+              price={juice.price}
+              description={juice.description}
+              onAdd={() => addToCart(juice)}
+            />
+          ))}
         </div>
       </div>
     </>

@@ -338,6 +338,48 @@ html {
   scroll-behavior: smooth;
 }
 
+.kartitems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px;
+}
+
+.kartitemwrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.totaldiv {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 20px;
+}
+
+.continueshoppingbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.continueshopping-button {
+  height: 35px;
+  width: 200px;
+  background-color: blue;
+  border: 1px solid blue;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   body {
     width: 100%;
