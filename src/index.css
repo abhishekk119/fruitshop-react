@@ -29,6 +29,12 @@ body {
   width: 95%;
 }
 
+.kartimage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .maincontainer {
   margin-top: 70px; /* Should match your navbar height */
 }

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import shoppingcartimage from "./assets/icons8-shopping-cart-80.png";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar({ counter, showCounter }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,10 +76,9 @@ function Navbar({ counter, showCounter }) {
             </div>
           )}
           <div className="kartimage">
-            <img
-              src={shoppingcartimage}
-              style={{ height: "45px", width: "45px" }}
-              alt="Cart"
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              style={{ height: "40px", width: "40px", color: "white" }}
             />
           </div>
         </Link>

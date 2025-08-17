@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Kart({ cart }) {
   const navigate = useNavigate();
@@ -42,7 +44,7 @@ function Kart({ cart }) {
                   color: "gray",
                 }}
               >
-                ₹{item.price} × {item.quantity}
+                ₹{item.price} x {item.quantity}
               </p>
               <p
                 style={{
@@ -63,7 +65,7 @@ function Kart({ cart }) {
                 color: "gray",
               }}
             >
-              Total: {totalPrice}
+              Total: ₹{totalPrice}
             </h3>
           </div>
 
