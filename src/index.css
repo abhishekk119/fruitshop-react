@@ -587,7 +587,7 @@ html {
 
   .alert {
     top: 60px;
-    right: 3%;
+    right: 6%;
     transform: translateX(50%); /* Center horizontally on mobile */
     width: 200px;
   }

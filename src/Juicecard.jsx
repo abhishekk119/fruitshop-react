@@ -21,7 +21,7 @@ function Juicecard({
         {showitemaddedmsg && (
           <div className="itemaddedmsgdiv">
             <p style={{ color: "#3a7bd5" }}>
-              ☑️ Item added to cart. Quantity: {itemQuantity}
+              Item added to cart. Quantity: {itemQuantity}
             </p>
           </div>
         )}
