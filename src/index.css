@@ -36,7 +36,7 @@ body {
 }
 
 .maincontainer {
-  margin-top: 70px; /* Should match your navbar height */
+  margin-top: 60px; /* Should match your navbar height */
 }
 
 ul {
@@ -394,6 +394,10 @@ html {
   cursor: pointer;
 }
 
+.continueshopping-button:active {
+  transform: scale(1.1); /* grows by 5% */
+}
+
 .placeorderbuttondiv {
   display: flex;
   align-items: center;
@@ -411,9 +415,146 @@ html {
   cursor: pointer;
 }
 
+.placeorderbutton:active {
+  transform: scale(1.1); /* grows by 5% */
+}
+
+/*.alert {
+  height: 30px;
+  width: 150px;
+  background-color: white;
+  color: #333;
+  border: 1px solid red;
+  margin-left: 1010px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}*/
+
+.alert {
+  position: fixed;
+  top: 90px; /* Position below navbar */
+  right: 20px; /* Position from right side */
+  height: 30px;
+  width: 150px;
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Ensure it's above other content */
+  /*animation: fadeInOut 3s ease-in-out forwards;*/
+  margin: 0; /* Remove any existing margins */
+}
+
+.alert p {
+  font-family: "Inter", sans-serif;
+}
+
+.alert::before {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* Position above the alert box */
+  left: 80%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid blue;
+}
+
+/* Add fade in/out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
 @media (max-width: 767px) {
   body {
     width: 100%;
+  }
+
+  /*.alert {
+    height: 30px;
+    width: 150px;
+    background-color: white;
+    color: #333;
+    border: 1px solid red;
+    margin-left: 250px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }*/
+
+  /*.alert {
+    position: relative; /* Needed for absolute positioning of the arrow 
+    height: 30px;
+    width: 150px;
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    margin-left: 250px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .alert::before {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* Position above the alert box 
+    left: 90%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid blue; /* Color matches your border 
+  }
+
+  .alert::after {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* Position above the alert box 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid white; /* Color matches your background 
+    margin-bottom: 1px; /* Slightly overlaps the red border 
+  }
+    */
+
+  .alert {
+    top: 60px;
+    right: 25%;
+    transform: translateX(50%); /* Center horizontally on mobile */
+    width: 200px;
+  }
+
+  .alert::before {
+    left: 90%;
   }
   .navbar {
     width: 100%;
@@ -476,5 +617,84 @@ html {
   /* Prevent body scroll when menu is open */
   body.menu-open {
     overflow: hidden;
+  }
+
+  .kartitemwrapper {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .kartitems {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+
+  .kartitems img {
+    grid-row: span 3;
+    height: 80px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .kartitems h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+  }
+
+  .kartitems p {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+  }
+
+  .totaldiv {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+  }
+
+  .placeorderbuttondiv {
+    padding: 0 15px;
+  }
+
+  .placeorderbutton {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    line-height: 6px;
+  }
+
+  .continueshoppingbutton {
+    padding: 0 15px;
+    margin-top: 10px;
+  }
+
+  .continueshopping-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    line-height: 6px;
   }
 }

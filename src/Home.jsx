@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import App from "./App";
 
-function Home({ addToCart }) {
+function Home({ addToCart, showAlert }) {
   const fruits = [
     {
       imageSource: Apples,
@@ -97,6 +97,8 @@ function Home({ addToCart }) {
     };
   }, [isMenuOpen]);
 
+  // Add the alert timeout effect here
+
   return (
     <>
       <div className="maincontainer">
@@ -105,6 +107,12 @@ function Home({ addToCart }) {
           showCounter={showCounter}
           onKartClick={() => setShowKart(true)}
         />
+
+        {showAlert && (
+          <div className="alert">
+            <p>Cart updated!</p>
+          </div>
+        )}
         <Sectionlabel sectionname="Fruits" id="fruits-section" />
         <div className="fruitcardcontainer" id="fruits">
           {fruits.map((fruit, i) => (

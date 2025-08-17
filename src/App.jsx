@@ -6,6 +6,7 @@ import Home from "./Home";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [showAlert, setShowAlert] = useState(false);
 
   const addToCart = (item) => {
     setCart((prev) => {
@@ -23,13 +24,24 @@ function App() {
       // If new item, add with quantity 1
       return [...prev, { ...item, quantity: 1 }];
     });
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 3000);
   };
 
   return (
     <>
       <Router basename="/fruitshop-react">
         <Routes>
-          <Route path="*" element={<Home addToCart={addToCart} />} />
+          <Route
+            path="*"
+            element={
+              <Home
+                addToCart={addToCart}
+                showAlert={showAlert}
+                setShowAlert={setShowAlert}
+              />
+            }
+          />
           <Route path="/kart" element={<Kart cart={cart} />} />
         </Routes>
       </Router>

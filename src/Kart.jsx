@@ -12,6 +12,7 @@ function Kart({ cart }) {
   return (
     <>
       <Navbar />
+
       {console.log(cart)}
       {cart.length === 0 ? (
         <p style={{ textAlign: "center", marginTop: "80px" }}>
