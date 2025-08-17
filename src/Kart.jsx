@@ -24,7 +24,7 @@ function Kart({ cart }) {
               <img
                 src={item.imageSource}
                 alt=""
-                style={{ height: "40px", width: "60px" }}
+                style={{ height: "40px", width: "60px", borderRadius: "6px" }}
               />
               <h3
                 style={{
