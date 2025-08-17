@@ -7,11 +7,12 @@ function Navbar({ counter, showCounter }) {
 
   return (
     <nav className="navbar">
-      <h2 className="logo">
-        <strong>FruitShop</strong>
-      </h2>
+      <div className="navbarcontainer">
+        <h2 className="logo">
+          <strong>FruitShop</strong>
+        </h2>
 
-      {/* Hamburger Icon (Mobile Only) */}
+        {/* Hamburger Icon (Mobile Only) 
       <div
         className={`hamburger ${isMenuOpen ? "open" : ""}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -21,7 +22,7 @@ function Navbar({ counter, showCounter }) {
         <span></span>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay 
       <div className={`mobile-menu ${isMenuOpen ? "active" : ""}`}>
         <ul>
           <li>
@@ -47,36 +48,40 @@ function Navbar({ counter, showCounter }) {
         </ul>
       </div>
 
-      {/* Desktop Menu (Hidden on Mobile) */}
-      <ul className="desktop-menu">
-        <li>
-          <a href="#fruits">Fruits</a>
-        </li>
-        <li>
-          <a href="#juices">Juices</a>
-        </li>
-        <li>
-          <a href="#">Store Locator</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
+      {/* Desktop Menu (Hidden on Mobile) 
+      <div className="desktopmenu">
+        <ul className="desktop-menu">
+          <li>
+            <a href="#fruits">Fruits</a>
+          </li>
+          <li>
+            <a href="#juices">Juices</a>
+          </li>
+          <li>
+            <a href="#">Store Locator</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      */}
 
-      <Link to="/kart" className="kart">
-        {showCounter && (
-          <div className="itemcounter">
-            <p>{counter}</p>
+        <Link to="/kart" className="kart">
+          {showCounter && (
+            <div className="itemcounter">
+              <p>{counter}</p>
+            </div>
+          )}
+          <div className="kartimage">
+            <img
+              src={shoppingcartimage}
+              style={{ height: "45px", width: "45px" }}
+              alt="Cart"
+            />
           </div>
-        )}
-        <div className="kartimage">
-          <img
-            src={shoppingcartimage}
-            style={{ height: "45px", width: "45px" }}
-            alt="Cart"
-          />
-        </div>
-      </Link>
+        </Link>
+      </div>
     </nav>
   );
 }

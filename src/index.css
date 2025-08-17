@@ -12,7 +12,7 @@ body {
   z-index: 1000; /* Ensures navbar stays above other content */
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -20,6 +20,13 @@ body {
   background: linear-gradient(to right, #3a7bd5, #d53a9d);
   /*background: linear-gradient(to right, green, rgb(3, 88, 3));*/
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbarcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
 }
 
 .maincontainer {
