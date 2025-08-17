@@ -1,4 +1,12 @@
-function Fruitcard({ imageSource, name, price, description, onAdd }) {
+function Fruitcard({
+  imageSource,
+  name,
+  price,
+  description,
+  onAdd,
+  showitemaddedmsg,
+  itemQuantity,
+}) {
   return (
     <div className="fruitcardwrapper">
       <div className="fruitcard">
@@ -10,6 +18,11 @@ function Fruitcard({ imageSource, name, price, description, onAdd }) {
         <h2>{name}</h2>
         <h3>Price: ₹{price}</h3>
         <p>{description}</p>
+        {showitemaddedmsg && (
+          <p style={{ color: "#4caf50" }}>
+            ✅ Item added to cart. Quantity: {itemQuantity}
+          </p>
+        )}
         <div className="buttons">
           <button className="buynowbtn">Buy Now</button>
           <button className="addtocartbtn" onClick={onAdd}>

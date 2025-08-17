@@ -14,13 +14,17 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import App from "./App";
 
-function Home({ addToCart, showAlert }) {
+function Home({ addToCart, showAlert, addedItems, cart }) {
+  const handleAddToCart = (item) => {
+    addToCart(item);
+  };
+
   const fruits = [
     {
       imageSource: Apples,
       name: "Kashmiri Apple",
       price: 220,
-      description: "1kg Kashmiri apples fresh from the farm.",
+      description: "1kg Kashmiri apples from the farm.",
     },
     {
       imageSource: Banana,
@@ -115,30 +119,44 @@ function Home({ addToCart, showAlert }) {
         )}
         <Sectionlabel sectionname="Fruits" id="fruits-section" />
         <div className="fruitcardcontainer" id="fruits">
-          {fruits.map((fruit, i) => (
-            <Fruitcard
-              key={i}
-              imageSource={fruit.imageSource}
-              name={fruit.name}
-              price={fruit.price}
-              description={fruit.description}
-              onAdd={() => addToCart(fruit)}
-            />
-          ))}
+          {fruits.map((fruit, i) => {
+            const cartItem = cart.find((item) => item.name === fruit.name);
+            const quantity = cartItem ? cartItem.quantity : 0;
+
+            return (
+              <Fruitcard
+                key={i}
+                imageSource={fruit.imageSource}
+                name={fruit.name}
+                price={fruit.price}
+                description={fruit.description}
+                onAdd={() => handleAddToCart(fruit)}
+                showitemaddedmsg={addedItems.includes(fruit.name)}
+                itemQuantity={quantity}
+              />
+            );
+          })}
         </div>
         <hr />
         <Sectionlabel sectionname="Juices" id="juices-section" />
         <div className="juicecardcontainer" id="juices">
-          {juices.map((juice, i) => (
-            <Juicecard
-              key={i}
-              imageSource={juice.imageSource}
-              name={juice.name}
-              price={juice.price}
-              description={juice.description}
-              onAdd={() => addToCart(juice)}
-            />
-          ))}
+          {juices.map((juice, i) => {
+            const cartItem = cart.find((item) => item.name === juice.name);
+            const quantity = cartItem ? cartItem.quantity : 0;
+
+            return (
+              <Juicecard
+                key={i}
+                imageSource={juice.imageSource}
+                name={juice.name}
+                price={juice.price}
+                description={juice.description}
+                onAdd={() => handleAddToCart(juice)}
+                showitemaddedmsg={addedItems.includes(juice.name)}
+                itemQuantity={quantity}
+              />
+            );
+          })}
         </div>
       </div>
     </>

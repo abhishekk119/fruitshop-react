@@ -7,6 +7,7 @@ import Home from "./Home";
 function App() {
   const [cart, setCart] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
+  const [addedItems, setAddedItems] = useState([]);
 
   const addToCart = (item) => {
     setCart((prev) => {
@@ -26,6 +27,9 @@ function App() {
     });
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 3000);
+    setAddedItems((prev) =>
+      prev.includes(item.name) ? prev : [...prev, item.name]
+    );
   };
 
   return (
@@ -39,6 +43,8 @@ function App() {
                 addToCart={addToCart}
                 showAlert={showAlert}
                 setShowAlert={setShowAlert}
+                addedItems={addedItems}
+                cart={cart}
               />
             }
           />

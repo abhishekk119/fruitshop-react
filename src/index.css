@@ -107,9 +107,9 @@ ul li a {
   justify-content: center;
   height: auto;
   width: 280px;
-  border: 1px solid rgb(211, 211, 211);
   background-color: white;
   border-radius: 10px;
+  border: 1px solid rgb(211, 211, 211);
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -203,17 +203,20 @@ ul li a {
   gap: 8px;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: auto;
 }
 
 .buynowbtn {
   height: 35px;
-  width: 80px;
+  width: 100%;
   border: 2px solid white;
   border-radius: 8px;
   color: white;
   background-color: rgb(67, 189, 67);
   cursor: pointer;
   font-family: "Inter", sans-serif;
+  font-weight: bold;
 }
 
 .buynowbtn:active {
@@ -222,13 +225,14 @@ ul li a {
 
 .addtocartbtn {
   height: 35px;
-  width: 95px;
+  width: 100%;
   border: 2px solid white;
   border-radius: 8px;
-  color: white;
-  background-color: blue;
+  color: black;
+  background-color: rgb(241, 241, 46);
   cursor: pointer;
   font-family: "Inter", sans-serif;
+  font-weight: bold;
 }
 
 .addtocartbtn:active {
@@ -438,9 +442,9 @@ html {
   right: 20px; /* Position from right side */
   height: 30px;
   width: 150px;
-  background-color: white;
-  color: black;
-  border: 1px solid rgb(196, 196, 196);
+  background-color: black;
+  color: white;
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -464,7 +468,7 @@ html {
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid white; /* White fill */
+  border-bottom: 8px solid black; /* White fill */
   filter: drop-shadow(0 -1px 0 rgb(196, 196, 196)); /* Grey border effect */
   z-index: 1; /* Ensure it appears above other elements */
 }
@@ -503,6 +507,10 @@ html {
     opacity: 0;
     transform: translateY(-10px);
   }
+}
+
+.itemaddedmsg {
+  color: #4caf50;
 }
 
 @media (max-width: 767px) {
