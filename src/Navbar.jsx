@@ -78,7 +78,7 @@ function Navbar({ counter, showCounter }) {
           <div className="kartimage">
             <FontAwesomeIcon
               icon={faCartShopping}
-              style={{ height: "40px", width: "40px", color: "white" }}
+              style={{ height: "30px", width: "30px", color: "white" }}
             />
           </div>
         </Link>
