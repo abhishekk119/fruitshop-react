@@ -37,7 +37,7 @@ function Kart({ cart }) {
               </h3>
               <p
                 style={{
-                  fontSize: "8px",
+                  fontSize: "15px",
                   fontFamily: "Inter, sans-serif",
                   color: "gray",
                 }}
