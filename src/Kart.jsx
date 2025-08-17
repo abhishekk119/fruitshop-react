@@ -26,15 +26,45 @@ function Kart({ cart }) {
                 alt=""
                 style={{ height: "40px", width: "60px" }}
               />
-              <h3>{item.name}</h3>
-              <p>
+              <h3
+                style={{
+                  fontSize: "15px",
+                  fontFamily: "Inter, sans-serif",
+                  color: "gray",
+                }}
+              >
+                {item.name}
+              </h3>
+              <p
+                style={{
+                  fontSize: "15px",
+                  fontFamily: "Inter, sans-serif",
+                  color: "gray",
+                }}
+              >
                 ₹{item.price} × {item.quantity}
               </p>
-              <p>Subtotal: ₹{item.price * item.quantity}</p>
+              <p
+                style={{
+                  fontSize: "15px",
+                  fontFamily: "Inter, sans-serif",
+                  color: "gray",
+                }}
+              >
+                Subtotal: ₹{item.price * item.quantity}
+              </p>
             </div>
           ))}
           <div className="totaldiv">
-            <h3>Total = {totalPrice}</h3>
+            <h3
+              style={{
+                fontSize: "15px",
+                fontFamily: "Inter, sans-serif",
+                color: "gray",
+              }}
+            >
+              Total: {totalPrice}
+            </h3>
           </div>
 
           <div className="placeorderbuttondiv">
