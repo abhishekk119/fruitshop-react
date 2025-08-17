@@ -12,7 +12,6 @@ function Kart({ cart }) {
   return (
     <>
       <Navbar />
-      <h1>This is the kart.</h1>
       {console.log(cart)}
 
       <div className="kartitemwrapper">
@@ -32,6 +31,10 @@ function Kart({ cart }) {
         ))}
         <div className="totaldiv">
           <h3>Total = {totalPrice}</h3>
+        </div>
+
+        <div className="placeorderbuttondiv">
+          <button className="placeorderbutton">Place order</button>
         </div>
       </div>
 

@@ -130,10 +130,6 @@ ul li a {
   tap-highlight-color: transparent; /* Standard property */
 }
 
-.fruitcardwrapper:hover {
-  transform: scale(1.01);
-}
-
 .fruitcard {
   display: flex;
   flex-direction: column;
@@ -185,6 +181,11 @@ ul li a {
   color: grey;
 }
 
+.juicecardwrapper {
+  -webkit-tap-highlight-color: transparent; /* For iOS/Safari */
+  tap-highlight-color: transparent; /* Standard property */
+}
+
 .buttons {
   display: flex;
   gap: 8px;
@@ -203,7 +204,7 @@ ul li a {
   font-family: "Inter", sans-serif;
 }
 
-.buynowbtn:hover {
+.buynowbtn:active {
   transform: scale(1.1); /* grows by 5% */
 }
 
@@ -218,7 +219,7 @@ ul li a {
   font-family: "Inter", sans-serif;
 }
 
-.addtocartbtn:hover {
+.addtocartbtn:active {
   transform: scale(1.1); /* grows by 5% */
 }
 
@@ -354,6 +355,7 @@ html {
   border-radius: 10px;
   margin: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 90px; /* Should match your navbar height */
 }
 
 .totaldiv {
@@ -375,6 +377,23 @@ html {
   width: 200px;
   background-color: blue;
   border: 1px solid blue;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.placeorderbuttondiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.placeorderbutton {
+  height: 35px;
+  width: 200px;
+  background-color: green;
+  border: 1px solid green;
   border-radius: 8px;
   color: white;
   cursor: pointer;
