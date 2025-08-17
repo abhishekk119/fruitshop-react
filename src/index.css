@@ -12,7 +12,7 @@ body {
   z-index: 1000; /* Ensures navbar stays above other content */
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -46,7 +46,6 @@ ul li a {
 }
 
 .logo {
-  margin-left: 60px;
   font-family: "Dancing Script", cursive;
   font-size: 25px;
   font-weight: 700;
@@ -405,7 +404,6 @@ html {
   }
   .navbar {
     width: 100%;
-    justify-content: space-evenly;
   }
 
   .logo {

@@ -77,7 +77,6 @@ function Navbar({ counter, showCounter }) {
           />
         </div>
       </Link>
-      <button className="login-button">Login</button>
     </nav>
   );
 }
