@@ -17,6 +17,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
+  height: 75px;
   /*background: linear-gradient(to right, #3a7bd5, #d53a9d);*/
   background: linear-gradient(to right, green, rgb(5, 69, 5));
   /*background: linear-gradient(to right, green, rgb(3, 88, 3));*/
@@ -38,7 +39,7 @@ body {
 }
 
 .maincontainer {
-  margin-top: 60px; /* Should match your navbar height */
+  margin-top: 70px; /* Should match your navbar height */
 }
 
 ul {
@@ -603,7 +604,7 @@ html {
     */
 
   .alert {
-    top: 60px;
+    top: 85px;
     right: 6%;
     transform: translateX(50%); /* Center horizontally on mobile */
     width: 200px;
