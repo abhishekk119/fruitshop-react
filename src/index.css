@@ -38,6 +38,11 @@ body {
   margin-right: 25px;
 }
 
+.kartimage {
+  -webkit-tap-highlight-color: transparent; /* For iOS/Safari */
+  tap-highlight-color: transparent; /* Standard property */
+}
+
 .maincontainer {
   margin-top: 70px; /* Should match your navbar height */
 }
@@ -311,6 +316,11 @@ hr {
   margin-bottom: 8px;
 }
 
+.kartwrapper {
+  -webkit-tap-highlight-color: transparent; /* For iOS/Safari */
+  tap-highlight-color: transparent; /* Standard property */
+}
+
 .maincontainer {
   display: flex;
   flex-direction: column;
@@ -375,15 +385,26 @@ html {
   scroll-behavior: smooth;
 }
 
-.kartitems {
+/*.kartitems {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
   padding: 15px;
+}*/
+
+.kartitems {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #e2dfdf;
 }
 
-.kartitemwrapper {
+/*.kartitemwrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -391,14 +412,48 @@ html {
   border-radius: 10px;
   margin: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 90px; /* Should match your navbar height */
+  margin-top: 90px;
+}*/
+
+.kartitemwrapper {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 90px;
+  background-color: white;
 }
 
-.totaldiv {
+/*.totaldiv {
   display: flex;
   align-items: center;
   justify-content: right;
   padding-right: 20px;
+}*/
+
+.totaldiv {
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.kartitemwrapper > p {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #666;
+  font-family: "Inter", sans-serif;
 }
 
 .continueshoppingbutton {
@@ -409,7 +464,7 @@ html {
 }
 
 .continueshopping-button {
-  height: 35px;
+  height: 55px;
   width: 200px;
   background-color: blue;
   border: 1px solid blue;
@@ -430,12 +485,12 @@ html {
 }
 
 .placeorderbutton {
-  height: 35px;
+  height: 55px;
   width: 200px;
-  background-color: green;
-  border: 1px solid green;
+  background-color: yellow;
+  border: 1px solid yellow;
   border-radius: 8px;
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -544,9 +599,57 @@ html {
   border-radius: 8px;
 }
 
+.kartitems img {
+  grid-row: span 3;
+  height: 80px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.kartitems h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+  font-family: "Inter", sans-serif;
+}
+
+.kartitems p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+  font-family: "Inter", sans-serif;
+}
+
+.deliveryaddressdiv {
+  height: 80px;
+  width: 98%;
+  background-color: #7dcd80;
+  border: 2px dashed white;
+  display: flex;
+  border-radius: 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+.deliveryaddressdiv p {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
 @media (max-width: 767px) {
   body {
     width: 100%;
+  }
+
+  .deliveryaddressdiv {
+    width: 320px;
   }
 
   /*.alert {
@@ -735,8 +838,8 @@ html {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    background-color: #4caf50;
-    color: white;
+    background-color: yellow;
+    color: black;
     border: none;
     border-radius: 8px;
     line-height: 6px;

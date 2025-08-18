@@ -68,8 +68,16 @@ function Kart({ cart }) {
             </h3>
           </div>
 
+          <div className="deliveryaddressdiv">
+            <p>
+              Delivering To: Behind Dr. P.K.Das Chamber, Golbagan, Coochbehar,
+              Phone: 9332522166
+            </p>
+            <p>Expected Delivery: 25 Minutes</p>
+          </div>
+
           <div className="placeorderbuttondiv">
-            <button className="placeorderbutton">Place order</button>
+            <button className="placeorderbutton">Continue to payment</button>
           </div>
         </div>
       )}
