@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import App from "./App";
 
-function Home({ addToCart, showAlert, addedItems, cart }) {
+function Home({ addToCart, showAlert, addedItems, cart, showCounter }) {
   const handleAddToCart = (item) => {
     addToCart(item);
   };
@@ -79,14 +79,14 @@ function Home({ addToCart, showAlert, addedItems, cart }) {
     },
   ];
 
-  let [counter, setCounter] = useState(0);
-  let [showCounter, setShowCounter] = useState(false);
+  // let [counter, setCounter] = useState(0);
+  // let [showCounter, setShowCounter] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function incrementCounter() {
-    setCounter((prev) => prev + 1);
-    setShowCounter(true);
-  }
+  // function incrementCounter() {
+  //   setCounter((prev) => prev + 1);
+  //   setShowCounter(true);
+  // }
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -107,8 +107,8 @@ function Home({ addToCart, showAlert, addedItems, cart }) {
     <>
       <div className="maincontainer">
         <Navbar
-          counter={counter}
           showCounter={showCounter}
+          cart={cart}
           onKartClick={() => setShowKart(true)}
         />
 

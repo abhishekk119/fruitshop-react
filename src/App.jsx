@@ -8,6 +8,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
   const [addedItems, setAddedItems] = useState([]);
+  const [showCounter, setShowCounter] = useState(false);
 
   const addToCart = (item) => {
     setCart((prev) => {
@@ -30,6 +31,7 @@ function App() {
     setAddedItems((prev) =>
       prev.includes(item.name) ? prev : [...prev, item.name]
     );
+    setShowCounter(true);
   };
 
   return (
@@ -45,6 +47,7 @@ function App() {
                 setShowAlert={setShowAlert}
                 addedItems={addedItems}
                 cart={cart}
+                showCounter={showCounter}
               />
             }
           />

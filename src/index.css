@@ -17,7 +17,8 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
-  background: linear-gradient(to right, #3a7bd5, #d53a9d);
+  /*background: linear-gradient(to right, #3a7bd5, #d53a9d);*/
+  background: linear-gradient(to right, green, rgb(5, 69, 5));
   /*background: linear-gradient(to right, green, rgb(3, 88, 3));*/
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -278,18 +279,34 @@ hr {
   margin: 0; /* remove default paragraph margins */
   padding: 0; /* remove extra padding if any */
   color: white;
+  text-decoration: none;
 }
 
 .itemcounter {
   box-sizing: border-box;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   background-color: red;
+  border: 1px solid red;
   border-radius: 50%;
   display: flex;
+  margin-left: 15px;
   align-items: center;
   justify-content: center;
   color: white; /* Optional for contrast */
+  z-index: 10;
+}
+
+.itemcounterwrapper {
+  height: 15px;
+}
+
+.kartwrapper {
+  position: relative; /* This makes it the positioning context for absolute children */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .maincontainer {
@@ -440,7 +457,7 @@ html {
 .alert {
   position: fixed;
   top: 90px; /* Position below navbar */
-  right: 20px; /* Position from right side */
+  right: 58px; /* Position from right side */
   height: 30px;
   width: 150px;
   background-color: black;
