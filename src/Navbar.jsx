@@ -10,7 +10,15 @@ function Navbar({ showCounter, cart }) {
           <strong>FruitShop</strong>
         </h2>
 
-        <Link to="/kart" className="kart" style={{ textDecoration: "none" }}>
+        <Link
+          to="/kart"
+          className="kart"
+          style={{
+            textDecoration: "none",
+            WebkitTapHighlightColor: "transparent", // For iOS/Safari
+            tapHighlightColor: "transparent",
+          }}
+        >
           <div className="kartwrapper">
             <div className="itemcounterwrapper">
               {showCounter && <div className="itemcounter">{cart.length}</div>}

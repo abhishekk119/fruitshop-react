@@ -79,7 +79,7 @@ function Kart({ cart }) {
 
           <div className="placeorderbuttondiv">
             <button className="placeorderbutton">
-              Continue to payment {">>"}
+              Continue to payment <span className="animate-arrows">{">>"}</span>
             </button>
           </div>
         </div>

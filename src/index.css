@@ -662,6 +662,21 @@ html {
   padding: 0;
 }
 
+.animate-arrows {
+  display: inline-block; /* Required for transforms */
+  animation: moveArrows 1s infinite ease-in-out;
+}
+
+@keyframes moveArrows {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px); /* Move right by 5px */
+  }
+}
+
 @media (max-width: 767px) {
   body {
     width: 100%;
