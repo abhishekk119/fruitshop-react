@@ -666,7 +666,7 @@ html {
   }
 
   .deliveryaddressdiv {
-    width: calc(100% - 26px);
+    width: calc(100% - 25px);
   }
 
   /*.alert {
