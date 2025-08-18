@@ -424,7 +424,7 @@ html {
   border-radius: 10px;
   margin: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 90px;
+  margin-top: 40px;
   background-color: white;
 }
 
@@ -623,7 +623,7 @@ html {
 
 .deliveryaddressdiv {
   height: 80px;
-  width: 98%;
+  width: calc(100% - 25px);
   background-color: #7dcd80;
   border: 2px dashed white;
   display: flex;
@@ -643,13 +643,30 @@ html {
   font-family: "Inter", sans-serif;
 }
 
+.kartlogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 90px;
+}
+
+.kartlogofruitshop {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(12, 86, 12);
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 767px) {
   body {
     width: 100%;
   }
 
   .deliveryaddressdiv {
-    width: 290px;
+    width: calc(100% - 28px);
   }
 
   /*.alert {

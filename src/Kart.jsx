@@ -12,8 +12,9 @@ function Kart({ cart }) {
   return (
     <>
       <Navbar />
-
-      {console.log(cart)}
+      <div className="kartlogo">
+        <p className="kartlogofruitshop">FruitShop</p>
+      </div>
       {cart.length === 0 ? (
         <p style={{ textAlign: "center", marginTop: "80px" }}>
           Your cart is empty
